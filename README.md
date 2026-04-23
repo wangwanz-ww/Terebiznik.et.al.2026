@@ -1,5 +1,5 @@
 # Terebiznik.et.al.2026
-Data analysis for Terebiznik et al. (2026) Temperature-dependent sex determination is adaptive in many reptiles and  2 is underpinned by male production in good environments.
+Data analysis for Terebiznik et al. (2026) Ontogenetic Variation in Sex Ratios and the Adaptive Significance of Tem-perature-Dependent Sex Determination.
 Data and analysis of wild, natural sex ratio records of reptiles to investigate the origins of temperature-dependent sex determination. This analysis was conducted in RStudio (Version 2026.01.1+403) using the MCMCglmm package. 
 
 **System Requirements**
