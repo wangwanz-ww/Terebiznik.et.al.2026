@@ -37,19 +37,19 @@ The data is further subdivided into a conservative data where each one of those 
 
 For each record, the data consists of:
 
-population ID: an ID value for population of each sex ratio record
-species: scientific latin name of species
-Life.Stage: the life stage of either birth (birth.sex.ratio), juvenile (juvenile.sex.ratio), or adult (adult.sex.ratio)
-Sex.Ratio: the sex ratio presented as proportion male
-N: sample size for sex ratio record
-sex.determination: type of sex determining mechanism of either genetic sex determination (GSD) or temperature-dependent sex determination (TSD)
-SDM.Type: more specific category of sex determining mechanism of either GSD, TSD Ia, or TSD II
-SuperTaxa: whether the species belongs to a sister clade of crocodilians and turtles (crocoturtle) or squamates (squamata)
-Model4: category fit for model 4 which lists GSD species as 'GSD' and any TSD species as their taxon (turtle, croc, lizard)
-Conservative: A Yes/No column indicating whether the record is part of the conservative data set (Y) or is a sexual dimorphism assumed record (N)
-Citation: citation or citation code. Citation codes can be matched to citations in the 'Citations Codes.csv' file
-Source: whether the source of the data came from Bokony et al 2018 (Bokony), from the ROSIE data base (ROSIE) or from personal communications (Other)
-sex.det.source: reference for sex determining mechanism for the species
+- population ID: an ID value for population of each sex ratio record
+- species: scientific latin name of species
+- Life.Stage: the life stage of either birth (birth.sex.ratio), juvenile (juvenile.sex.ratio), or adult (adult.sex.ratio)
+- Sex.Ratio: the sex ratio presented as proportion male
+- N: sample size for sex ratio record
+- sex.determination: type of sex determining mechanism of either genetic sex determination (GSD) or temperature-dependent sex determination (TSD)
+- SDM.Type: more specific category of sex determining mechanism of either GSD, TSD Ia, or TSD II
+- SuperTaxa: whether the species belongs to a sister clade of crocodilians and turtles (crocoturtle) or squamates (squamata)
+- Model4: category fit for model 4 which lists GSD species as 'GSD' and any TSD species as their taxon (turtle, croc, lizard)
+- Conservative: A Yes/No column indicating whether the record is part of the conservative data set (Y) or is a sexual dimorphism assumed record (N)
+- Citation: citation or citation code. Citation codes can be matched to citations in the 'Citations Codes.csv' file
+- Source: whether the source of the data came from Bokony et al 2018 (Bokony), from the ROSIE data base (ROSIE) or from personal communications (Other)
+- sex.det.source: reference for sex determining mechanism for the species
 
 **Phylogeny Description**
 
@@ -61,12 +61,23 @@ The phylogeny for species of the conservative data only is called 'conservative 
 
 The code for running models is attached in the file 'Terebiznik et al Code.R' This code includes the following steps:
 
-Loading in of necessary packages and data sets
-Loading in and formatting phylogenies for use in MCMCglmm models
-Creating binary data sets for use in MCMCglmm models
-Running models testing our 4 hypothesis using only hatchling and adult data
-Model comparisons to identify the best model
-Running the best model with juvenile data included
+1. Loading in of necessary packages and data sets
+2. Loading in and formatting phylogenies for use in MCMCglmm models
+3. Creating binary data sets for use in MCMCglmm models
+4. Running models testing our 4 hypothesis using only hatchling and adult data
+5. Model comparisons to identify the best model
+6. Running the best model with juvenile data included
+
+**Sexual Size Dimorphism Dataset Description**
+
+This is a unique data set of 802 species-level maximum body length (snout-vent-length (SVL)/ carapace length (CL)) records for each sex. Exception includes 3 species for which the maximum body length data was inavailable and thus alternative body length parameters were used. Sexual dimorphism data were obtained from Oskyrko et al. (2024),  Rhodin et al. (2021),  Ceballos et al. (2013), Ceballos & Iverson (2014), Halámková et al. (2013), Deeming (2022) and further literature survey. 
+
+For each record, the data consists of:
+- species: scientific latin name of species
+- F.cm.maxSVL/CL: female maximum body length in cm
+- M.cm.maxSVL/CL: male maximum body length in cm
+- dataset: citation
+- Notes for exception: notes that indicate the nature of the body length data provided if it is not maximum SVL or CL.
 
 **Citation Code Description**
 
